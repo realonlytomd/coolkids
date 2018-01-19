@@ -2,10 +2,10 @@ $(document).ready(function() {
   // Getting references to the name inout and author container, as well as the table body
   var nameInput = $("#user-name");
   var authorList = $("tbody");
-  var authorContainer = $(".author-container");
+  var authorContainer = $(".user-container");
   // Adding event listeners to the form to create a new object, and the button to delete
   // an Author
-  $(document).on("submit", "#author-form", handleAuthorFormSubmit);
+  $(document).on("submit", "#user-form", handleAuthorFormSubmit);
   $(document).on("click", ".delete-author", handleDeleteButtonPress);
 
   // Getting the intiial list of Authors
