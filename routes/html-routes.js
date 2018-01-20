@@ -1,5 +1,5 @@
 // *********************************************************************************
-// html-routes.js - this file offers a set of routes for sending users to the various html pages
+// html-routes.js - this file sets up routes to the various html pages
 // *********************************************************************************
 
 // Dependencies
@@ -14,21 +14,22 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
+    res.sendFile(path.join(__dirname, "../public/view.html"));
   });
 
-  // cms route loads cms.html
-  app.get("/cms", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/cms.html"));
+  // create exercise route loads create.html
+  app.get("/create", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/create.html"));
   });
 
-  // blog route loads blog.html
-  app.get("/blog", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
+  // exercise route loads exercise.html
+  app.get("/exercise", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/exercise.html"));
   });
 
-  app.get("/authors", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/author-manager.html"));
+  // users route loads user-manager.html
+  app.get("/users", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/user-manager.html"));
   });
 
 };
